@@ -60,6 +60,8 @@ class _AppViewState extends State<AppView> {
                 break;
               case AuthenticationStatus.unauthenticated:
                 _navigator.pushAndRemoveUntil<void>(
+                  // want to go to the OnboardingPage here but then how do I
+                  // do the routing after that?
                   LoginPage.route(),
                   (route) => false,
                 );
